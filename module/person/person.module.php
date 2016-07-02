@@ -9,9 +9,9 @@
       private $collection;
 
 
-      public function __construct( $key )
+      public function __construct( $data )
       {
-
+        $this->collection = new Collection( $data );
       }
     }
   }

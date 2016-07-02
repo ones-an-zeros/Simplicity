@@ -43,7 +43,7 @@
       {
         $this->setKey( $data->key );
         $this->setName( $data->first, $data->middle, $data->last );
-        $this->setEmail( $data->email );
+        $this->setEmail( $data->username, $data->domain, $data->tld );
         $this->setDob( $data->day, $data->month, $data->year );
         $this->setPhoto( $data->photo );
         $this->setGender( $data->gender );
@@ -55,18 +55,18 @@
 
       public function __destruct()
       {
-
+        
       }
 
 
       private function setKey( int $key ) : void
-      { $this->data[self::key] = $key; }
+      { $this->data[self::key] = new Key( $key ); }
 
       private function setName( string $first, string $middle, string $last ) : void
       { $this->data[self::name] = new Name( $first, $middle, $last ); }
 
-      private function setEmail( string $email ) : void
-      { $this->data[self::email] = $email; }
+      private function setEmail( string $username, string $domain, string $tld ) : void
+      { $this->data[self::email] = new Email( $username, $domain, $tld ); }
 
       private function setDob( int $day, int $month, int $year ) : void
       { $this->data[self::dob] = new Dob( $day, $month, $year ); }

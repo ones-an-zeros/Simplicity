@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="625b313b-6b14-42e0-b203-6612c2a112e2" name="ones-n-zeros.com" url="http://ones-n-zeros.com">
+        <fileTransfer host="ones-n-zeros.com" port="22" rootFolder="/var/www/smm" accessType="SFTP" password="df9adfc4dfc6dfd3dff9dfc5dfc6dfdfdfdedfc3dfc5dfc4dfd9df8b" username="corey">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+{
+  "module": {
+    "directory": {
+      "person": {
+        "directory": {
+          "object": {
+            "directory": {},
+            "file": [
+              "account.object.php",
+              "browser.object.php",
+              "collection.object.php",
+              "dob.object.php",
+              "email.object.php",
+              "gender.object.php",
+              "ip.object.php",
+              "key.object.php",
+              "location.object.php",
+              "name.object.php",
+              "photo.object.php"
+            ]
+          }
+        },
+        "file": ["person.module.php"]
+      }
+    },
+    "file": []
+  }
+}
