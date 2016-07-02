@@ -1,17 +1,17 @@
 <?php
 
-  namespace SMM\Configuration\Controller
+  namespace Simplicity\Configuration\Controller
   {
     /** ********************************************************************* */
     /**                            OBJECT IMPORT                              */
     /** ********************************************************************* */
 
     /** The support singleton trait */
-    use SMM\Support\FrameworkTrait\Singleton;
+    use Simplicity\Library\Traits\Singleton;
     /** The controller abstract */
-    use SMM\Configuration\ObjectAbstract\Controller;
+    use Simplicity\Configuration\Abstracts\Controller;
 
-    class IncludeController extends Controller
+    class Includes extends Controller
     {
       /** ********************************************************************* */
       /**                              TRAITS                                   */

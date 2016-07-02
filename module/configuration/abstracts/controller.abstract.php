@@ -1,14 +1,10 @@
 <?php
 
-  namespace SMM\Configuration\ObjectAbstract
+  namespace Simplicity\Configuration\Abstracts
   {
-
-
 
     abstract class Controller
     {
-      
-
 
       const root = 0;
 
@@ -19,7 +15,6 @@
         self::data => null
       ];
 
-
       public function constructor()
       {
         /** Set the root directory */
@@ -27,10 +22,6 @@
         /** Set the data directory */
         $this->setDataDirectory();
       }
-
-
-
-
 
       protected function data( string $file ) : \stdClass
       { return json_decode( file_get_contents( $this->directory( self::data ).$file ) ); }
@@ -43,7 +34,7 @@
       { return $this->data[$selector]; }
 
       private function setRootDirectory()
-      { $this->data[self::root] = substr( __DIR__, 0, -29); }
+      { $this->data[self::root] = substr( __DIR__, 0, -30); }
 
       private function setDataDirectory()
       { $this->data[self::data] = $this->directory( self::root )."configuration".DIRECTORY_SEPARATOR; }

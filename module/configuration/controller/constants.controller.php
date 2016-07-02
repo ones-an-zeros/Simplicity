@@ -1,23 +1,20 @@
 <?php
 
-  namespace SMM\Configuration\Controller
+  namespace Simplicity\Configuration\Controller
   {
-
-
-
 
     /** ********************************************************************* */
     /**                            OBJECT IMPORT                              */
     /** ********************************************************************* */
 
     /** The support singleton trait */
-    use SMM\Support\FrameworkTrait\Singleton;
+    use Simplicity\Library\Traits\Singleton;
     /** The controller abstract */
-    use SMM\Configuration\ObjectAbstract\Controller;
+    use Simplicity\Configuration\Abstracts\Controller;
     /** The collection object for this controller */
-    use SMM\Configuration\ControllerConstant\Collection;
+    use Simplicity\Configuration\Constants\Collection;
 
-    class ConstantController extends Controller
+    class Constants extends Controller
     {
       /** ********************************************************************* */
       /**                              TRAITS                                   */

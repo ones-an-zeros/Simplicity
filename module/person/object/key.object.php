@@ -1,6 +1,6 @@
 <?php
 
-  namespace Person
+  namespace SMM\Module\Person\Object
   {
 
     class Key

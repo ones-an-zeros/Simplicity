@@ -1,6 +1,6 @@
 <?php
 
-  namespace SMM\Configuration\ControllerConstant
+  namespace Simplicity\Configuration\Constants
   {
 
     class Collection implements \Countable, \IteratorAggregate, \ArrayAccess

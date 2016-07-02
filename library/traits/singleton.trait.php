@@ -1,6 +1,6 @@
 <?php
 
-  namespace SMM\Support\FrameworkTrait
+  namespace Simplicity\Library\Traits
   {
 
     trait Singleton

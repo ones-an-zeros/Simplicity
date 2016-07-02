@@ -1,6 +1,6 @@
 <?php
 
-  namespace Person
+  namespace Simplicity\Library\Objects
   {
 
     class Name
@@ -45,13 +45,13 @@
       { return $this->data[self::last]; }
 
 
-      private function setFirst( string $first ) : void
+      private function setFirst( string $first )
       { $this->data[self::first] = $first; }
 
-      private function setMiddle( string $middle ) : void
+      private function setMiddle( string $middle )
       { $this->data[self::middle] = $middle; }
 
-      private function setLast( string $last ) : void
+      private function setLast( string $last )
       { $this->data[self::last] = $last; }
     }
   }

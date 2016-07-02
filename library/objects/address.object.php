@@ -1,9 +1,9 @@
 <?php
 
-  namespace Person
+  namespace Simplicity\Library\Objects
   {
 
-    class Location
+    class Address
     {
 
       const street  = 0;
@@ -55,19 +55,19 @@
       { return $this->data[self::zip]; }
 
 
-      private function setStreet( string $street ) : void
+      private function setStreet( string $street )
       { $this->data[self::street] = $street; }
 
-      private function setApt( int $apt ) : void
+      private function setApt( int $apt )
       { $this->data[self::apt] = $apt; }
 
-      private function setCity( string $city ) : void
+      private function setCity( string $city )
       { $this->data[self::city] = $city; }
 
-      private function setState( string $state ) : void
+      private function setState( string $state )
       { $this->data[self::state] = $state; }
 
-      private function setZip( string $zip ) : void
+      private function setZip( string $zip )
       { $this->data[self::zip] = $zip; }
     }
   }

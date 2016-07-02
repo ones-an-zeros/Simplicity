@@ -6,23 +6,40 @@
           "object": {
             "directory": {},
             "file": [
-              "account.object.php",
-              "browser.object.php",
+              "accounts.object.php",
               "collection.object.php",
-              "dob.object.php",
-              "email.object.php",
-              "gender.object.php",
-              "ip.object.php",
               "key.object.php",
-              "location.object.php",
-              "name.object.php",
-              "photo.object.php"
+              "photos.object.php"
             ]
           }
         },
         "file": ["person.module.php"]
       }
     },
+    "file": []
+  },
+  "library": {
+    "directory": {
+      "traits": {
+        "directory": {},
+        "file": [
+          "singleton.trait.php"
+        ]
+      },
+      "objects": {
+        "directory": {},
+        "file": [
+          "address.object.php",
+          "browser.object.php",
+          "date.object.php",
+          "emailAddress.object.php",
+          "gender.object.php",
+          "ipAddress.object.php",
+          "name.object.php"
+        ]
+      }
+    },
+
     "file": []
   }
 }

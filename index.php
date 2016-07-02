@@ -1,16 +1,13 @@
 <?php
 
-
-
-  /** Force strict types */
   declare( strict_types = 1 );
 
 
-  namespace SMM
+  namespace Simplicity
   {
 
     /** The support singleton trait */
-    include_once ("support" . DIRECTORY_SEPARATOR . "trait" . DIRECTORY_SEPARATOR . "singleton.trait.php");
+    include_once ("library" . DIRECTORY_SEPARATOR . "traits" . DIRECTORY_SEPARATOR . "singleton.trait.php");
 
     try {
       /** Include the configuration module. This will do 90% of the configuration work */
@@ -28,9 +25,15 @@
       echo '<pre>'.print_r($exception,true).'</pre>';
     }
 
-
-
-    echo '<pre>'.print_r(get_declared_classes(),true).'</pre>';
+    try{
+      /** Include the configuration module. This will do 90% of the configuration work */
+      include_once( "application".DIRECTORY_SEPARATOR."socialMediaManipulator".DIRECTORY_SEPARATOR."application.php");
+      $application = \Application\Application::getInstance();
+      $application->run();
+    } catch ( \Throwable $exception){
+      echo '<h1>Application Failed to load!</h1>';
+      echo '<pre>'.print_r($exception,true).'</pre>';
+    }
   }
 
 

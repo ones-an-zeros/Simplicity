@@ -1,31 +1,31 @@
 <?php
 
-  namespace SMM\Configuration
+  namespace Simplicity\Configuration
   {
     /** ********************************************************************* */
     /**                              INCLUDES                                 */
     /** ********************************************************************* */
 
     /** The controller abstract */
-    include_once("abstract".DIRECTORY_SEPARATOR."controller.abstract.php");
+    include_once("abstracts".DIRECTORY_SEPARATOR."controller.abstract.php");
     /** The include controller */
-    include_once("controller".DIRECTORY_SEPARATOR."constant.controller.php");
+    include_once("controller".DIRECTORY_SEPARATOR."constants.controller.php");
 
     include_once("object".DIRECTORY_SEPARATOR."constant".DIRECTORY_SEPARATOR."collection.object.php");
 
     /** The include controller */
-    include_once("controller".DIRECTORY_SEPARATOR."include.controller.php");
+    include_once("controller".DIRECTORY_SEPARATOR."includes.controller.php");
 
     /** ********************************************************************* */
     /**                            OBJECT IMPORT                              */
     /** ********************************************************************* */
 
     /** The support singleton trait */
-    use SMM\Support\FrameworkTrait\Singleton;
+    use Simplicity\Library\Traits\Singleton;
     /** The include controller */
-    use SMM\Configuration\Controller\ConstantController;
+    use Simplicity\Configuration\Controller\Constants;
     /** The include controller */
-    use SMM\Configuration\Controller\IncludeController;
+    use Simplicity\Configuration\Controller\Includes;
 
 
     class Configuration
@@ -60,9 +60,9 @@
 
       public function constructor()
       {
-        $this->data[self::constant] = ConstantController::getInstance();
+        $this->data[self::constant] = Constants::getInstance();
         /** Initialize the include controller */
-        $this->data[self::include]  = IncludeController::getInstance();
+        $this->data[self::include]  = Includes::getInstance();
 
 
       }

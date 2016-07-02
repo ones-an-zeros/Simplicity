@@ -1,6 +1,6 @@
 <?php
 
-  namespace SMM\Exception
+  namespace Simplicity\Exception
   {
     /** ********************************************************************* */
     /**                          PHP CONFIGURATION                            */
@@ -15,7 +15,7 @@
     /** ********************************************************************* */
 
     /** The support singleton trait */
-    use SMM\Support\FrameworkTrait\Singleton;
+    use Simplicity\Library\Traits\Singleton;
 
     class Exception
     {
@@ -47,7 +47,7 @@
     /** Instantiate the handler so we do not have to worry about it */
     Exception::getInstance();
     /** Set the exception handler */
-    set_error_handler( array( 'SMM\Exception\Exception', 'handle' ) );
+    set_error_handler( array( 'Simplicity\Exception\Exception', 'handle' ) );
     /** Set the shutdown function */
-    register_shutdown_function( array( 'SMM\Exception\Exception', 'fatal' ) );
+    register_shutdown_function( array( 'Simplicity\Exception\Exception', 'fatal' ) );
   }

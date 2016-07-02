@@ -1,92 +1,95 @@
 <?php
 
-  namespace Person
+  namespace SMM\Module\Person\Object
   {
+
+    use SMM\Module\Person\Object\{Accounts, Key, Photos};
+    use SMM\Support\Object\{Address, Browser, Date, EmailAddress, Gender, IpAddress, Name};
+
 
     class Collection
     {
 
-      const key       = 0;
+      const key         = 0;
 
-      const name      = 1;
+      const name        = 1;
 
-      const email     = 2;
+      const email       = 2;
 
-      const dob       = 3;
+      const dob         = 3;
 
-      const photo     = 4;
+      const photos      = 4;
 
-      const gender    = 5;
+      const gender      = 5;
 
-      const location  = 6;
+      const location    = 6;
 
-      const account   = 7;
+      const accounts    = 7;
 
-      const browser   = 8;
+      const browser     = 8;
 
-      const ip        = 9;
+      const ipAddress   = 9;
 
       private $data = [
         self::key       => null,
         self::name      => null,
         self::email     => null,
         self::dob       => null,
-        self::photo     => null,
+        self::photos    => null,
         self::gender    => null,
         self::location  => null,
-        self::account   => null,
+        self::accounts  => null,
         self::browser   => null,
-        self::ip        => null,
+        self::ipAddress => null,
       ];
 
-      public function __construct( object $data )
+      public function __construct( \stdClass $data )
       {
         $this->setKey( $data->key );
         $this->setName( $data->first, $data->middle, $data->last );
         $this->setEmail( $data->username, $data->domain, $data->tld );
         $this->setDob( $data->day, $data->month, $data->year );
-        $this->setPhoto( $data->photo );
+        $this->setPhoto( $data->photos );
         $this->setGender( $data->gender );
         $this->setLocation( $data->street, $data->apt, $data->city, $data->state, $data->zip );
-        $this->setAccount( $data->account );
+        $this->setAccount( $data->accounts );
         $this->setBrowser( $data->browser );
-        $this->setIp( $data->Ip );
+        $this->setIpAddress( $data->ipAddress );
       }
 
       public function __destruct()
       {
-        
+
       }
+      
+      private function setKey( int $key )
+      { $this->data[self::key]    = new Key( $key ); }
 
+      private function setName( string $first, string $middle, string $last )
+      { $this->data[self::name]   = new Name( $first, $middle, $last ); }
 
-      private function setKey( int $key ) : void
-      { $this->data[self::key] = new Key( $key ); }
+      private function setEmail( string $username, string $domain, string $tld )
+      { $this->data[self::email]  = new EmailAddress( $username, $domain, $tld ); }
 
-      private function setName( string $first, string $middle, string $last ) : void
-      { $this->data[self::name] = new Name( $first, $middle, $last ); }
+      private function setDob( int $day, int $month, int $year )
+      { $this->data[self::dob]    = new Date( $day, $month, $year ); }
 
-      private function setEmail( string $username, string $domain, string $tld ) : void
-      { $this->data[self::email] = new Email( $username, $domain, $tld ); }
+      private function setPhoto( string $photos )
+      { $this->data[self::photos] = new Photos( $photos ); }
 
-      private function setDob( int $day, int $month, int $year ) : void
-      { $this->data[self::dob] = new Dob( $day, $month, $year ); }
+      private function setGender( string $gender )
+      { $this->data[self::gender] = new Gender( $gender); }
 
-      private function setPhoto( string $photo ) : void
-      { $this->data[self::photo] = $photo; }
+      private function setLocation( string $street, int $apt, string $city, string $state, int $zip )
+      { $this->data[self::location] = new Address( $street, $apt, $city, $state, $zip ); }
 
-      private function setGender( string $gender ) : void
-      { $this->data[self::gender] = $gender; }
+      private function setAccount( int $accounts )
+      { $this->data[self::accounts] = new Accounts( $accounts ); }
 
-      private function setLocation( string $street, int $apt, string $city, string $state, int $zip ) : void
-      { $this->data[self::location] = new Location( $street, $apt, $city, $state, $zip ); }
+      private function setBrowser( string $browser )
+      { $this->data[self::browser] = new Browser( $browser ); }
 
-      private function setAccount( int $account ) : void
-      { $this->data[self::account] = $account; }
-
-      private function setBrowser( string $browser ) : void
-      { $this->data[self::browser] = $browser; }
-
-      private function setIp( string $ip ) : void
-      { $this->data[self::ip] = $ip; }
+      private function setIpAddress( string $ipAddress )
+      { $this->data[self::ipAddress] = new IpAddress( $ipAddress ); }
     }
 }

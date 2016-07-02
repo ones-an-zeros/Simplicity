@@ -1,9 +1,9 @@
 <?php
 
-  namespace Person
+  namespace Simplicity\Library\Objects
   {
 
-    class Dob
+    class Date
     {
       const day   = 0;
 
@@ -42,13 +42,13 @@
       { return $this->data[self::year]; }
 
 
-      private function setDay( int $day ) : void
+      private function setDay( int $day )
       { $this->data[self::day] = $day; }
 
-      private function setMonth( int $month ) : void
+      private function setMonth( int $month )
       { $this->data[self::month] = $month; }
 
-      private function setYear( int $year ) : void
+      private function setYear( int $year )
       { $this->data[self::year] = $year; }
     }
   }
