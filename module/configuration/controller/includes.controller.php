@@ -1,6 +1,6 @@
 <?php
 
-  namespace Simplicity\Configuration\Controller
+  namespace Simplicity\Module\Configuration\Controller
   {
     /** ********************************************************************* */
     /**                            OBJECT IMPORT                              */
@@ -62,9 +62,6 @@
       }
 
       private function doInclude( $file, $path )
-      {
-        //echo $this->directory(self::root). implode(DIRECTORY_SEPARATOR, $path). DIRECTORY_SEPARATOR. $file.'<br />';
-        include_once( $this->directory(self::root). implode( DIRECTORY_SEPARATOR, $path ). DIRECTORY_SEPARATOR. $file );
-      }
+      { include_once( $this->directory(self::root). implode( DIRECTORY_SEPARATOR, $path ). DIRECTORY_SEPARATOR. $file ); }
     }
   }

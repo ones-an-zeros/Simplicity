@@ -3,6 +3,7 @@
   namespace Application
   {
 
+
     use Simplicity\Library\Traits\Singleton;
 
     class Application

@@ -1,4 +1,10 @@
 {
+  "core": {
+    "directory": {},
+    "file": [
+      "collection.object.php"
+    ]
+  },
   "module": {
     "directory": {
       "person": {

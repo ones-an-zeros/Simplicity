@@ -1,6 +1,6 @@
 <?php
 
-  namespace Simplicity\Configuration\Controller
+  namespace Simplicity\Module\Configuration\Controller
   {
 
     /** ********************************************************************* */

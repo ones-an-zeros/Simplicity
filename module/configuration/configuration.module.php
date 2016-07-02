@@ -1,6 +1,6 @@
 <?php
 
-  namespace Simplicity\Configuration
+  namespace Simplicity\Module\Configuration
   {
     /** ********************************************************************* */
     /**                              INCLUDES                                 */
@@ -23,9 +23,9 @@
     /** The support singleton trait */
     use Simplicity\Library\Traits\Singleton;
     /** The include controller */
-    use Simplicity\Configuration\Controller\Constants;
+    use Simplicity\Module\Configuration\Controller\Constants;
     /** The include controller */
-    use Simplicity\Configuration\Controller\Includes;
+    use Simplicity\Module\Configuration\Controller\Includes;
 
 
     class Configuration
