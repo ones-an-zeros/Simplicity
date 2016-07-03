@@ -1,6 +1,6 @@
 <?php
 
-  namespace Simplicity\Module\Helper\Object
+  namespace Simplicity\Module\Helper\Objects
   {
 
     class Collection

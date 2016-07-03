@@ -7,9 +7,18 @@
   },
   "module": {
     "directory": {
+      "urlParser": {
+        "directory": {
+          "objects": {
+            "directory": {},
+            "file": [ "collection.object.php"]
+          }
+        },
+        "file": [ "urlParser.module.php"]
+      },
       "person": {
         "directory": {
-          "object": {
+          "objects": {
             "directory": {},
             "file": [
               "accounts.object.php",

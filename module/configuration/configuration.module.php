@@ -6,69 +6,72 @@
     /**                              INCLUDES                                 */
     /** ********************************************************************* */
 
-    /** The controller abstract */
-    include_once("abstracts".DIRECTORY_SEPARATOR."controller.abstract.php");
-    /** The include controller */
-    include_once("controller".DIRECTORY_SEPARATOR."constants.controller.php");
 
-    include_once("object".DIRECTORY_SEPARATOR."constant".DIRECTORY_SEPARATOR."collection.object.php");
+    use Simplicity\Module\Helper\Helper;
+    Helper::include("controller.abstract.php",  ["module", "configuration", "abstracts"]);
 
-    /** The include controller */
-    include_once("controller".DIRECTORY_SEPARATOR."includes.controller.php");
+    Helper::include("constants.controller.php", ["module", "configuration", "controller"]);
+    Helper::include("collection.object.php",    ["module", "configuration", "objects", "constant"]);
+
+    Helper::include("includes.controller.php",  ["module", "configuration", "controller"]);
+
+    Helper::include("sites.controller.php",     ["module", "configuration", "controller"]);
+    Helper::include("collection.object.php",    ["module", "configuration", "objects", "sites"]);
 
     /** ********************************************************************* */
-    /**                            OBJECT IMPORT                              */
+    /**                                 USE                                   */
     /** ********************************************************************* */
 
-    /** The support singleton trait */
     use Simplicity\Library\Traits\Singleton;
-    /** The include controller */
     use Simplicity\Module\Configuration\Controller\Constants;
-    /** The include controller */
     use Simplicity\Module\Configuration\Controller\Includes;
+    use Simplicity\Module\Configuration\Controller\Sites;
 
 
     class Configuration
     {
       /** ********************************************************************* */
-      /**                              TRAITS                                   */
+      /**                             TRAITS                                    */
       /** ********************************************************************* */
 
       /** Use the singleton support trait */
       use Singleton;
 
       /** ********************************************************************* */
-      /**                               CONSTANTS                               */
+      /**                            CONSTANTS                                  */
       /** ********************************************************************* */
 
       const constant  = 0;
 
       const include   = 1;
 
+      const sites     = 2;
+
       /** ********************************************************************* */
-      /**                               VARIABLES                               */
+      /**                            VARIABLES                                  */
       /** ********************************************************************* */
 
       private $data = [
         self::constant  => null,
-        self::include   => null
+        self::include   => null,
+        self::sites     => null
       ];
 
       /** ********************************************************************* */
-      /**                                 CORE                                  */
+      /**                              CORE                                     */
       /** ********************************************************************* */
 
       public function constructor()
       {
         $this->data[self::constant] = Constants::getInstance();
-        /** Initialize the include controller */
         $this->data[self::include]  = Includes::getInstance();
+        $this->data[self::sites]    = Sites::getInstance();
 
 
       }
     }
     /** ********************************************************************* */
-    /**                            INSTANTIATE                                */
+    /**                             INSTANTIATE                               */
     /** ********************************************************************* */
 
     /** Make an instance of the configuration object so it is ready */

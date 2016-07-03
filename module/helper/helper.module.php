@@ -6,20 +6,15 @@
     /**                              INCLUDE                                  */
     /** ********************************************************************* */
 
-    /** Singleton Trait */
     include_once (".".DIRECTORY_SEPARATOR."library".DIRECTORY_SEPARATOR."traits".DIRECTORY_SEPARATOR."singleton.trait.php");
-    /** Singleton Trait */
     include_once ("objects".DIRECTORY_SEPARATOR."collection.object.php");
-
 
     /** ********************************************************************* */
     /**                                USE                                    */
     /** ********************************************************************* */
 
-    /** Singleton Trait */
     use Simplicity\Library\Traits\Singleton;
-    
-    use Simplicity\Module\Helper\Object\Collection;
+    use Simplicity\Module\Helper\Objects\Collection;
 
     class Helper
     {

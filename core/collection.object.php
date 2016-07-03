@@ -3,7 +3,7 @@
   namespace Simplicity\Core
   {
     /** ********************************************************************* */
-    /**                            OBJECT IMPORT                              */
+    /**                                   USE                                 */
     /** ********************************************************************* */
 
     use Simplicity\Module\Configuration\Configuration;
@@ -27,6 +27,8 @@
 
       const constant      = 2;
 
+      const sites         = 3;
+
       /** ********************************************************************* */
       /**                               VARIABLES                               */
       /** ********************************************************************* */
@@ -34,7 +36,8 @@
       private $data = [
         self::helper        => null,
         self::configuration => null,
-        self::constant      => null
+        self::constant      => null,
+        self::sites         => null
       ];
 
       /** ********************************************************************* */
@@ -46,6 +49,7 @@
         $this->setHelper( Helper::getInstance() );
         $this->setConfiguration( Configuration::getInstance() );
         $this->setConstant( Constants::getInstance() );
+        $this->setSites( Sites::getInstance() );
       }
 
       /** ********************************************************************* */
