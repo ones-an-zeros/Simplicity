@@ -12,7 +12,7 @@
     /** The controller abstract */
     use Simplicity\Configuration\Abstracts\Controller;
     /** The collection object for this controller */
-    use Simplicity\Configuration\Constants\Collection;
+    use Simplicity\Module\Configuration\Constants\Collection;
 
     class Constants extends Controller
     {

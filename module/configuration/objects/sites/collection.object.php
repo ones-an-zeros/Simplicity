@@ -1,5 +1,5 @@
 <?php
-  namespace Simplicity\Configuration\Sites
+  namespace Simplicity\Module\Configuration\Sites
   {
 
     class Collection implements \Countable, \IteratorAggregate, \ArrayAccess
@@ -12,7 +12,7 @@
       private $data = [
 
       ];
-      
+
       public function set( string $key, string $value ) : Collection
       {
         $this->data[$key] = $value;

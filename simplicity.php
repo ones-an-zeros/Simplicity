@@ -40,8 +40,9 @@
 
       public function constructor()
       {
-        echo "Simplicity Construct";
         $this->collection = new Collection();
+
+
       }
     }
     /** ********************************************************************* */
@@ -49,5 +50,7 @@
     /** ********************************************************************* */
 
     /** Instantiate Simplicity to start the process */
-    Simplicity::getInstance();
+    $Simplicity = Simplicity::getInstance();
+
+    echo '<pre>'.print_r($Simplicity,true).'</pre>';
   }

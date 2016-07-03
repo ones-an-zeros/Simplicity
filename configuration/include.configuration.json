@@ -7,14 +7,16 @@
   },
   "module": {
     "directory": {
-      "urlParser": {
+      "request": {
         "directory": {
           "objects": {
             "directory": {},
-            "file": [ "collection.object.php"]
+            "file": [
+              "address.object.php"
+            ]
           }
         },
-        "file": [ "urlParser.module.php"]
+        "file": ["request.module.php"]
       },
       "person": {
         "directory": {

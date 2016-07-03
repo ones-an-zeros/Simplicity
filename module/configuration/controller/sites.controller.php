@@ -9,6 +9,7 @@
 
     use Simplicity\Library\Traits\Singleton;
     use Simplicity\Configuration\Abstracts\Controller;
+    use Simplicity\Module\Configuration\Sites\Collection;
 
     class Sites extends Controller
     {
