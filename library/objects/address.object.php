@@ -23,7 +23,7 @@
         self::state   => null,
         self::zip     => null
       ];
-
+      
       public function __construct( string $street, int $apt, string $city, string $state, int $zip )
       {
         $this->setStreet( $street );

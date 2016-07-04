@@ -52,5 +52,5 @@
     /** Instantiate Simplicity to start the process */
     $Simplicity = Simplicity::getInstance();
 
-    echo '<pre>'.print_r($Simplicity,true).'</pre>';
+    //echo '<pre>'.print_r($Simplicity,true).'</pre>';
   }

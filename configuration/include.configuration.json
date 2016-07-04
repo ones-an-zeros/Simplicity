@@ -12,7 +12,14 @@
           "objects": {
             "directory": {},
             "file": [
-              "address.object.php"
+              "address.object.php",
+              "cookie.object.php",
+              "method.object.php",
+              "parameters.object.php",
+              "protocol.object.php",
+              "requestTime.object.php",
+              "script.object.php",
+              "userAgent.object.php"
             ]
           }
         },

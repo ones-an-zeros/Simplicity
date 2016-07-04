@@ -3,29 +3,29 @@
 namespace Simplicity\Module\Request
 {
 
-  class RequestTime
+  class Parameters
   {
     /** ********************************************************************* */
     /**                            CONSTANTS                                  */
     /** ********************************************************************* */
 
-    const time  = 0;
+    const get  = 0;
 
     /** ********************************************************************* */
     /**                            VARIABLES                                  */
     /** ********************************************************************* */
 
     private $data = [
-      self::time => null,
+      self::get => null,
     ];
 
     /** ********************************************************************* */
     /**                              CORE                                     */
     /** ********************************************************************* */
 
-    public function __construct( string $time )
+    public function __construct( array $get )
     {
-      $this->setTime( $time );
+      $this->setGet( $get );
     }
 
     public function __destruct()
@@ -37,14 +37,14 @@ namespace Simplicity\Module\Request
     /**                             GETTER                                    */
     /** ********************************************************************* */
 
-    public function time() : int
-    { return $this->data[self::time]; }
+    public function get() : int
+    { return $this->data[self::get]; }
 
     /** ********************************************************************* */
     /**                             SETTER                                    */
     /** ********************************************************************* */
 
-    private function setTime( string $time )
-    { $this->data[self::time] = $time; }
+    private function setGet( string $get )
+    { $this->data[self::get] = $get; }
   }
 }

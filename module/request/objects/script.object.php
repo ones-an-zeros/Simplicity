@@ -3,48 +3,48 @@
 namespace Simplicity\Module\Request
 {
 
-  class RequestTime
+  class Script
   {
     /** ********************************************************************* */
     /**                            CONSTANTS                                  */
     /** ********************************************************************* */
 
-    const time  = 0;
+    const text  = 0;
 
     /** ********************************************************************* */
     /**                            VARIABLES                                  */
     /** ********************************************************************* */
 
     private $data = [
-      self::time => null,
+      self::text => null,
     ];
 
     /** ********************************************************************* */
     /**                              CORE                                     */
     /** ********************************************************************* */
 
-    public function __construct( string $time )
+    public function __construct( string $text )
     {
-      $this->setTime( $time );
+      $this->setText( $text );
     }
 
     public function __destruct()
     {
-
+      
     }
 
     /** ********************************************************************* */
     /**                             GETTER                                    */
     /** ********************************************************************* */
 
-    public function time() : int
-    { return $this->data[self::time]; }
+    public function text() : int
+    { return $this->data[self::text]; }
 
     /** ********************************************************************* */
     /**                             SETTER                                    */
     /** ********************************************************************* */
 
-    private function setTime( string $time )
-    { $this->data[self::time] = $time; }
+    private function setText( string $text )
+    { $this->data[self::text] = $text; }
   }
 }
